@@ -9,6 +9,6 @@ export default {
   Head,
 
   // <title>
-  title: "My Vike App",
+  title: "Avanti Seguros - Soluciones expertas en seguros de propiedad horizontal",
   extends: vikeReact,
 } satisfies Config;

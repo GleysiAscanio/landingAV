@@ -1,0 +1,24 @@
+# Dependencias de Node.js
+node_modules/
+
+# Directorios de construcción
+dist/
+build/
+
+# Archivos de entorno
+.env
+.env.local
+
+# Archivos de logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos específicos del sistema
+.DS_Store
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
