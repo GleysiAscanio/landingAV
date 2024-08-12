@@ -74,7 +74,7 @@ const SideBar: React.FC<SideBarProps> = ({ isMenuVisible, setIsMenuVisible }) =>
           <div className="grid grid-cols-1 gap-10">
             {/* MENU */}
             <nav id="hidden-menu">
-              <ul className="flex flex-col w-[270px] font-bold text-own-white text-sm   md:text-base ">
+              <ul className="flex flex-col w-full font-bold text-own-white text-sm   md:text-base ">
                 <li className="w-full ">
                   <div className="py-[10px]">
                     <Link href="/" type={""}>
