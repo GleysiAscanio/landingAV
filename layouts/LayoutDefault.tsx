@@ -91,8 +91,11 @@ const SideBar: React.FC<SideBarProps> = ({ isMenuVisible, setIsMenuVisible }) =>
                       onClick={() => setIsMiniMenuOneVisible(!isMiniMenuOneVisible)}
                       className="w-5 h-5 text-white font-light flex self-end justify-end place-items-center"
                     >
-                      <i className={`${isMiniMenuOneVisible ? "hidden" : " block"} fa-solid fa-plus text-base`}></i>
-                      <i className={`${isMiniMenuOneVisible ? "block" : "hidden"} fa-solid fa-x text-sm`}></i>
+                      {!isMiniMenuOneVisible ? (
+                        <i className="fa-solid fa-x text-sm"></i>
+                      ) : (
+                        <i className="fa-solid fa-plus text-base"></i>
+                      )}
                     </button>
                   </div>
                   <ul className={`${isMiniMenuOneVisible && "mini-menu-opened"} mini-menu-one`}>
@@ -121,8 +124,11 @@ const SideBar: React.FC<SideBarProps> = ({ isMenuVisible, setIsMenuVisible }) =>
                       onClick={() => setIsMiniMenuTwoVisible(!isMiniMenuTwoVisible)}
                       className="w-5 h-5 text-white font-light flex self-end justify-end place-items-center"
                     >
-                      <i className={`${isMiniMenuTwoVisible ? "hidden" : "block"} fa-solid fa-plus text-base`}></i>
-                      <i className={`${isMiniMenuTwoVisible ? "block" : "hidden"} fa-solid fa-x text-sm`}></i>
+                      {!isMiniMenuTwoVisible ? (
+                        <i className="fa-solid fa-x text-sm"></i>
+                      ) : (
+                        <i className="fa-solid fa-plus text-base"></i>
+                      )}
                     </button>
                   </div>
                   <ul className={`${isMiniMenuTwoVisible && "mini-menu-opened"} mini-menu-one`}>
