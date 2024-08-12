@@ -199,8 +199,10 @@ function Header() {
 
   useEffect(() => {
     const handleAnimation = () => {
-      // console.log(document.documentElement.scrollTop);
-      // document.documentElement.scrollTop > 80 ? setScroll(true) : setScroll(false)
+      if (typeof window !== "undefined") {
+        setScroll(document.documentElement.scrollTop > 80);
+      }
+      // document.documentElement.scrollTop > 80 ? setScroll(true) : setScroll(false);
       // document.documentElement.scrollTop > 390 && setFeatures("features-div-animation");
       // document.documentElement.scrollTop > 800 && setScrollAboutUs({img: "about-us-div-img", text:"about-us-div-text"});
       // document.documentElement.scrollTop > 2600 && setScrollProcess({img: "process-div-img", text:"process-div-text"});
@@ -211,7 +213,7 @@ function Header() {
 
   return (
     <header
-      className={`flex justify-between fixed z-10 w-full h-70 border-solid border-b border-b-[rgba(255,255,255,0.16)] header ${scroll ? "scroll-header" : "normal-header"} lg:justify-center `}
+      className={`flex justify-between fixed z-50 w-full h-70 border-solid border-b border-b-[rgba(255,255,255,0.16)] header ${scroll ? "bg-own-theme-2" : "normal-header"} lg:justify-center `}
     >
       <div className="flex justify-between w-full max-h-[105px] py-5 px-3 md:max-h-[150px] md:px-7  min-[900px]:px-5 min-[900px]:py-0 lg:max-h-[90px]  lg:px-10  2xl:max-w-[1600px]">
         {/* MENU MOBILE */}
@@ -248,13 +250,16 @@ function Header() {
                   </Link>
                 </li>
                 <li
-                  className={`h-full flex place-items-center relative`}
+                  className="h-full flex place-items-center relative gap-1"
                   onMouseEnter={() => setIsMiniMenuOneVisible(true)}
                   onMouseLeave={() => setIsMiniMenuOneVisible(false)}
                 >
                   <Link href="/" type={""}>
                     NOSOTROS
                   </Link>
+                  <div className="icon-dropdown">
+                    <i className="fa-solid fa-angle-right top-0"></i>
+                  </div>
                   <ul
                     onMouseEnter={() => setIsMiniMenuOneVisible(true)}
                     onMouseLeave={() => setIsMiniMenuOneVisible(false)}
@@ -273,13 +278,16 @@ function Header() {
                   </ul>
                 </li>
                 <li
-                  className={`h-full flex place-items-center`}
+                  className="h-full flex place-items-center relative gap-1"
                   onMouseEnter={() => setIsMiniMenuTwoVisible(true)}
                   onMouseLeave={() => setIsMiniMenuTwoVisible(false)}
                 >
                   <Link href="/" type={""}>
                     SERVICIOS
                   </Link>
+                  <div className="icon-dropdown">
+                    <i className="fa-solid fa-angle-right top-0"></i>
+                  </div>
                   <ul
                     className={`${isMiniMenuTwoVisible === null && "hidden"} ${isMiniMenuTwoVisible ? "mini-menu-desktop-open" : "mini-menu-desktop-close"} w-[180px] pl-[20px] py-4 text-left bg-own-white text-own-black text-xs absolute top-[100%]`}
                   >
