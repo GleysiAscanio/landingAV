@@ -26,7 +26,7 @@ export function Link({ href, children, type }: LinkProps) {
           setIsActiveDesktop(false);
         }
       }}
-      className={`${isActive ? "is-active" : "text-own-theme-2"} ${isActiveDesktop ? "options-menu-open" : "options-menu-closed"} h-full content-center relative text-body `}
+      className={`${isActive ? "is-active" : "text-own-theme-2"} ${isActiveDesktop ? "options-menu-open" : "options-menu-closed"} ${type === "miniMenu" && "hover:text-own-theme-1"} h-full content-center relative text-body`}
     >
       {children}
     </a>

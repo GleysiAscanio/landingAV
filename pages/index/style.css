@@ -1,0 +1,23 @@
+.slider-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(44, 162, 251, 0.3);
+    background-blend-mode: luminosity;
+  }
+  .slider-bg::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(89.18deg, rgba(0, 14, 41, 0.81) 1.58%, rgba(0, 14, 41, 0.5) 99.36%);
+    opacity: 0.7;
+  }
+  

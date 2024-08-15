@@ -41,7 +41,6 @@ body {
   animation: 1s sidebar-principal-opened 1 ease-in-out forwards;
   opacity: 0;
 }
-
 @keyframes sidebar-principal-opened {
   0%{
     transform: translateX(300px);
@@ -53,10 +52,10 @@ body {
     opacity: 1;
   }
 }
+
 .sidebar-principal-closed {
   animation: 1s sidebar-principal-closed 1 ease-in-out forwards;
 }
-
 @keyframes sidebar-principal-closed {
   0%{
     transform: translateX(0px);
@@ -72,6 +71,7 @@ body {
   }
 }
 
+/* HEADER */
 .mini-menu-one, .mini-menu-two {
   transition: all 250ms ease-out;
   overflow: hidden;
@@ -89,7 +89,6 @@ body {
   transform: translateY(10px);
   opacity: 0;
 }
-
 @keyframes mini-menu-desktop-open {
   0%{
     transform: translateY(10px);
@@ -107,7 +106,6 @@ body {
   visibility: visible;
   opacity: 1;
 }
-
 @keyframes mini-menu-desktop {
   0%{
     transform: translateY(0px);
@@ -132,7 +130,6 @@ body {
   animation: openFromCenterToSides 0.4s ease-in-out forwards;
   transform-origin: center;
 }
-
 @keyframes openFromCenterToSides {
   0% {
     transform: scaleX(0);
@@ -147,7 +144,7 @@ body {
 
 .options-menu-closed::after {
   background-color: #eb9146;
-  height: 3.5px;
+  height: 3px;
   content: "";
   bottom: 0px;
   border-radius: 1px;
@@ -178,3 +175,27 @@ body {
   margin-bottom: 5%;
   transition: 0.4s;
 }
+
+.normal-header {
+  background-color: transparent;
+  box-shadow: 0px 0px 0px !important;
+  padding-top: 12px;
+  -webkit-transition: all 380ms ease-in-out;
+  -moz-transition: all 380ms ease-in-out;
+  -o-transition: all 380ms ease-in-out;
+  -ms-transition: all 380ms ease-in-out;
+  transition: all 380ms ease-in-out;
+  animation: 1s normal-header 1 ease-in-out forwards;
+}
+
+.scroll-header {
+  background-color: #901eb7;
+  box-shadow: 0 0 2px rgba(50, 50, 50, 0.4);
+  backdrop-filter: blur(20px);
+  -webkit-transition: all 380ms ease-in-out;
+  -moz-transition: all 380ms ease-in-out;
+  -o-transition: all 380ms ease-in-out;
+  -ms-transition: all 380ms ease-in-out;
+  transition: all 380ms ease-in-out;
+  animation: 1s scroll-header 1 ease-in-out forwards;
+}  

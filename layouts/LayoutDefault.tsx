@@ -27,7 +27,7 @@ function Content({ children }: { children: React.ReactNode }) {
 
 function Logo() {
   return (
-    <a href="/" className="self-center">
+    <a href="/" className="self-center pb-3">
       <img
         src={logoUrl}
         height={64}
@@ -73,7 +73,7 @@ const SideBar: React.FC<SideBarProps> = ({ isMenuVisible, setIsMenuVisible }) =>
           </div>
           <div className="grid grid-cols-1 gap-10">
             {/* MENU */}
-            <nav id="hidden-menu">
+            <nav id="hidden-menu text-body">
               <ul className="flex flex-col w-full font-bold text-own-white text-sm   md:text-base ">
                 <li className="w-full ">
                   <div className="py-[10px]">
@@ -219,7 +219,7 @@ function Header() {
 
   return (
     <header
-      className={`flex justify-between fixed z-50 w-full h-70 border-solid border-b border-b-[rgba(255,255,255,0.16)] header ${scroll ? "bg-own-theme-2" : "normal-header"} lg:justify-center `}
+      className={`flex justify-between fixed z-50 w-full h-70 border-solid border-b border-b-[rgba(255,255,255,0.16)] header ${scroll ? "scroll-header" : "normal-header"} lg:justify-center `}
     >
       <div className="flex justify-between w-full max-h-[105px] py-5 px-3 md:max-h-[150px] md:px-7  min-[900px]:px-5 min-[900px]:py-0 lg:max-h-[90px]  lg:px-10  2xl:max-w-[1600px]">
         {/* MENU MOBILE */}
@@ -246,9 +246,9 @@ function Header() {
         </div>
         {/* MENU DESKTOP */}
         <div className="hidden min-[900px]:grid grid-cols-[65%_35%] justify-between w-full min-[900px]:gap-5 lg:gap-7">
-          <div className="grid grid-cols-[30%_70%] pt-3">
+          <div className="grid grid-cols-[30%_70%]">
             <Logo />
-            <nav className="relative flex place-items-center text-[13px] text-center font-semibold text-cuerpo text-white 2xl:text-lg">
+            <nav className="relative flex place-items-center text-[13px] text-center font-semibold text-body text-white 2xl:text-lg">
               <ul className="flex flex-row justify-evenly w-full h-full place-items-center">
                 <li className="h-full flex place-items-center">
                   <Link href="/" type={""}>
@@ -327,7 +327,7 @@ function Header() {
               href="https://wa.me/+573142924296?text=Quiero%20Asesoría"
               target="_blank"
               rel="noreferrer"
-              className="hidden md:flex text-body place-items-center self-center justify-center h-[50px] w-44 px-[15px] text-xs text-own-white bg-own-theme-1 font-bold text-center rounded-[35px]"
+              className="hidden md:flex text-body place-items-center self-center justify-center h-[50px] w-44 px-[15px] text-xs text-own-white bg-own-theme-1 font-bold text-center rounded-[35px] hover:bg-own-theme-2 "
             >
               QUIERO ASESORÍA
             </a>
